@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
-from data_structures import get_names, get_spiciest_foods, print_spicy_foods, \
-    get_spicy_food_by_cuisine, print_spiciest_foods, get_average_heat_level
-
-
+# coding: utf-8
+import pytest
 
 spicy_foods = [
     {
@@ -21,6 +18,8 @@ spicy_foods = [
         "heat_level": 6,
     },
 ]
+
+
 
 
 def get_names(spicy_foods):
@@ -47,3 +46,4 @@ def get_average_heat_level(spicy_foods):
     total_heat_level = sum([food["heat_level"] for food in spicy_foods])
     num_spicy_foods = len(spicy_foods)
     return total_heat_level // num_spicy_foods if num_spicy_foods > 0 else 0
+

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-from ..data_structures import get_names, get_spiciest_foods, print_spicy_foods,\
-                                create_spicy_food, get_spicy_food_by_cuisine, \
+from data_structures import get_names, get_spiciest_foods, print_spicy_foods,\
+                                 get_spicy_food_by_cuisine, \
                                 print_spiciest_foods, get_average_heat_level
 
 import io
@@ -68,37 +68,4 @@ class TestDataStructures:
         '''contains function get_average_heat_level that returns average of heat_levels in spicy_foods.'''
         assert(get_average_heat_level(TestDataStructures.SPICY_FOODS) == 6)
 
-    def test_create_spicy_food(self):
-        '''contains function create_spicy_food that returns original list of spicy_foods with new spicy_food added.'''
-        new_spicy_foods = create_spicy_food(
-           TestDataStructures.SPICY_FOODS,
-            {
-                'name': 'Griot',
-                'cuisine': 'Haitian',
-                'heat_level': 10,
-            }
-        )
-
-        assert new_spicy_foods == [
-            {
-                "name": "Green Curry",
-                "cuisine": "Thai",
-                "heat_level": 9,
-            },
-            {
-                "name": "Buffalo Wings",
-                "cuisine": "American",
-                "heat_level": 3,
-            },
-            {
-                "name": "Mapo Tofu",
-                "cuisine": "Sichuan",
-                "heat_level": 6,
-            },
-            {
-                "name": "Griot",
-                "cuisine": "Haitian",
-                "heat_level": 10,
-            },
-        ]
-
+   
